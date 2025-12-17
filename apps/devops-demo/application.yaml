@@ -6,13 +6,19 @@ metadata:
 spec:
   project: default
 
-  source:
-    repoURL: https://github.com/akashjaiswal36/devops-platform-nodejs-app
-    targetRevision: main
-    path: helm/devops-demo
-    helm:
-      valueFiles:
-        - values.yaml
+  sources:
+    # 1️⃣ Helm chart source (App repo)
+    - repoURL: https://github.com/akashjaiswal36/devops-platform-nodejs-app
+      targetRevision: main
+      path: helm/devops-demo
+      helm:
+        valueFiles:
+          - $values/apps/devops-demo/values.yaml
+
+    # 2️⃣ Values source (GitOps repo)
+    - repoURL: https://github.com/akashjaiswal36/devops-platform-gitops
+      targetRevision: main
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
