@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: 178502900821.dkr.ecr.ap-south-1.amazonaws.com/devops-demo
+  repository: ajs3ra8/devops-demo
   tag: 27cd905de75289c2151d94d5924491cebac34b48
   pullPolicy: IfNotPresent
 
