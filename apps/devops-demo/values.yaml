@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ajs3ra8/devops-demo
-  tag: 6b1298299af4b74ae0c42018d24895d49bf44b12
+  tag: 2a9e2e92b4b28766ebda101f5226ece8427e82c2
   pullPolicy: IfNotPresent
 
 service:
